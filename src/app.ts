@@ -1,7 +1,7 @@
 import  express,{Application} from "express";
 import morgan from "morgan";
 import router from "./routes/indexroutes";
-import bodyParser from "body-parser";
+import cors from "cors";
 export class App{
     app:Application;
     constructor(){
@@ -17,6 +17,7 @@ export class App{
                 extended:true,
             })
         )
+        this.app.use(cors())
 
     }
     router(){

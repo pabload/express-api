@@ -1,11 +1,11 @@
 import {Router} from "express";
-import { addData, deleteData, editData, indexcontroller } from "../controllers/indexcontroller";
+import { addComment, deleteComment, getComments, UpdateComment } from "../controllers/commentsControllers";
 const router = Router();
 
-router.get("/",indexcontroller);
-router.post("/",addData);
-router.put("/",editData);
-router.delete("/",deleteData)
+router.get("/",getComments);
+router.post("/",addComment);
+router.put("/",UpdateComment);
+router.delete("/",deleteComment)
 
 
 
